@@ -1,0 +1,65 @@
+.lixeira-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.lixeira-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lixeira-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.lixeira-item:hover {
+    transform: scale(1.02);
+}
+
+.lixeira-item-content {
+    flex-grow: 1;
+    color: #333;
+}
+
+.lixeira-item p {
+    margin: 5px 0;
+}
+
+.restore-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.restore-button:hover {
+    background-color: #218838;
+}
+
+.empty-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #888;
+}
