@@ -18,11 +18,13 @@ const auth = getAuth();
 
 function App() {
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);  // Estado de carregamento
 
     // Verifica o estado de autenticação
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             setUser(user); // Atualiza o estado com o usuário autenticado
+            setLoading(false); // Finaliza o carregamento
         });
         return unsubscribe;
     }, []);
@@ -41,8 +43,15 @@ function App() {
         return user ? children : <Navigate to="/" />; // Se não estiver autenticado, redireciona para o login
     };
 
+    if (loading) {
+        return <div>Carregando...</div>;  // Ou qualquer outro indicativo de carregamento
+    }
+
     return (
         <Router>
+            {/* Verifica se o usuário está autenticado e redireciona para /cadastro */}
+            {user && window.location.pathname === "/" && <Navigate to="/cadastro" />}
+
             {/* Exibir o AppBar apenas se o usuário estiver autenticado */}
             {user && (
                 <AppBar position="static" style={{ marginBottom: '20px' }}>
