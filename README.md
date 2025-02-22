@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+Sistema de Gestão de Funcionários
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um sistema de gestão de funcionários desenvolvido em React, com operações CRUD (Create, Read, Update, Delete) e funcionalidade de lixeira para recuperação de cadastros excluídos. A aplicação permite adicionar, visualizar, editar, excluir e recuperar registros de funcionários, oferecendo uma interface intuitiva e responsiva.
 
-## Available Scripts
+Funcionalidades
+Adicionar Funcionário: Formulário para inserir novos registros de funcionários, com validação de campos.
 
-In the project directory, you can run:
+Visualizar Funcionários: Listagem de todos os funcionários cadastrados, com opções de ordenação e busca.
 
-### `npm start`
+Editar Funcionário: Atualização de informações de funcionários existentes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Excluir Funcionário: Remoção de registros de funcionários com confirmação. Os cadastros excluídos são movidos para a lixeira.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Recuperar da Lixeira: Recuperação de cadastros excluídos, restaurando-os para a lista principal.
 
-### `npm test`
+Interface Responsiva: Design adaptável para diferentes dispositivos (desktop, tablet, mobile).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Tecnologias Utilizadas
+React (Create React App)
 
-### `npm run build`
+JavaScript (ES6+)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+HTML5 e CSS3
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React Hooks (useState, useEffect) para gerenciamento de estado
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Como Executar o Projeto
+Siga os passos abaixo para rodar o projeto na sua máquina local:
 
-### `npm run eject`
+Pré-requisitos
+Node.js instalado (versão 14 ou superior).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+NPM ou Yarn para gerenciamento de dependências.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Passos
+Clone o repositório:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bash
+Copy
+git clone https://github.com/seu-usuario/gestao-funcionarios.git  
+Acesse a pasta do projeto:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+bash
+Copy
+cd gestao-funcionarios  
+Instale as dependências:
 
-## Learn More
+bash
+Copy
+npm install  
+ou
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+bash
+Copy
+yarn install  
+Execute o projeto:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+bash
+Copy
+npm start  
+ou
 
-### Code Splitting
+bash
+Copy
+yarn start  
+Acesse a aplicação no navegador:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Copy
+http://localhost:3000  
+Estrutura do Projeto
+bash
+Copy
+gestao-funcionarios/  
+├── public/  
+│   ├── index.html  
+│   └── ...  
+├── src/  
+│   ├── components/  
+│   │   ├── FuncionarioForm.js  
+│   │   ├── FuncionarioList.js  
+│   │   ├── Lixeira.js  
+│   │   └── ...  
+│   ├── App.js  
+│   ├── index.js  
+│   └── ...  
+├── package.json  
+├── README.md  
+└── ...  
+Funcionalidade de Lixeira
+A funcionalidade de lixeira permite que os cadastros excluídos sejam movidos para uma área separada, onde podem ser visualizados e recuperados.
 
-### Analyzing the Bundle Size
+Como Funciona
+Excluir Funcionário: Ao excluir um funcionário, ele é movido para a lixeira em vez de ser removido permanentemente.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Visualizar Lixeira: Acesse a lixeira para ver todos os cadastros excluídos.
 
-### Making a Progressive Web App
+Recuperar Funcionário: Selecione um funcionário na lixeira e restaure-o para a lista principal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Exclusão Permanente: Opção para excluir permanentemente os cadastros da lixeira.
 
-### Advanced Configuration
+Contribuição
+Contribuições são bem-vindas! Siga os passos abaixo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Faça um fork do projeto.
 
-### Deployment
+Crie uma branch para sua feature:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+bash
+Copy
+git checkout -b minha-feature  
+Commit suas mudanças:
 
-### `npm run build` fails to minify
+bash
+Copy
+git commit -m 'Adicionando nova funcionalidade'  
+Push para a branch:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+bash
+Copy
+git push origin minha-feature  
+Abra um Pull Request.
+
+Licença
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
